@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <br>
+          <ion-title>Alarma</ion-title>
+        </ion-col>
+        <ion-col>
+          <div align="right"><ion-fab-button id="" shape="round" (click)="Logout()" color="danger" fill="outline"> <ion-icon name="return-left"></ion-icon></ion-fab-button></div>
+        </ion-col>
+        </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+</ion-header>
+<ion-content [ngClass]="cambiarFondo">
+  <br>
+  <!--div align="center" class="titulo">{{titulo}}</div-->
+  <div class="padre">
+    <div class="hijo">
+        <ion-fab slot="fixed" vertical="center" horizontal="center">
+            
+        </ion-fab>
+        <ion-fab-button  class="activador" (click)="ToActivarAlarma();" ><img id="escudo" src="assets/icon/imagenes usadas/{{activate}}"></ion-fab-button>
+    </div>
+  </div>
+  
+</ion-content>

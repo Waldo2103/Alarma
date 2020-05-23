@@ -1,0 +1,104 @@
+@import "../../theme/variables.scss";
+
+$colors: (
+  primary:    #fc5a5a,
+  secondary:  #fcf15a,
+  danger:     #6dfc5a,
+  light:      #5ae4fc,
+  dark:       #785afc
+);
+ion-button {
+  background: color($colors);
+}
+
+.titulo{
+    font-family: Destroy;
+    font-size: 30px; 
+}
+.padre {
+    //background: yellow;
+    height: 500px;
+    /*IMPORTANTE*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hijo {
+    //background: red;
+    width: 220px;
+  }
+
+  .contentActivado {
+    --background: linear-gradient( #c30000, #3f3f3f, #c30000);
+    --background-repeat: no-repeat !important;
+    --background-size: cover !important;
+}
+.content {
+    // --background: url('./assets/fondos/fondo.png');
+    --background: linear-gradient( #3f3f3f 50%,#8d8d8d/* #c30000*/);
+    --background-repeat: no-repeat !important;
+    --background-size: cover !important;
+}
+
+#ion-button{
+  width: 100%;
+  height: 20%;
+  margin: 0%;
+  font-size: 35px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  background-color: #8ee662;
+}
+
+
+page-home {
+
+  
+
+  .scroll-content{
+      background-color: red;  
+      //background-image: radial-gradient(#f5ce7a, #f3bb73, #f3b42e, #f5a031, #e07f00);
+      display: flex;
+      flex-direction: column;
+      padding: 1em !important;
+  }   
+
+  .buttons-container{
+      height: calc(100% - 1em);
+  }
+
+  .big-button-container{
+      border-radius: 1em;
+      :hover{
+          cursor: pointer;            
+          background-color: rgba(5, 123, 123, 0.38);
+          border-radius: 1em;
+      }
+      &-first{
+          margin-bottom: 0.5em;
+          background-image: radial-gradient(#0f8e94, #0e8d94, #0e8d94, #0a7479, #0a7479);
+          //background-image: radial-gradient(#d46893, #d21661, #ea2975, #af0548, #b6396b);
+          //background-color: $first-detail-color;
+      }
+      &-second{
+          margin-top: 0.5em;
+          background-image: radial-gradient(#0f8e94, #0e8d94, #0e8d94, #0a7479, #0a7479);
+          //background-image: radial-gradient(#d46893, #d21661, #ea2975, #af0548, #b6396b);
+          //background-color: $first-detail-color;
+      }
+  }
+
+  .text-title{
+      color: white;
+      font-size: 2.5rem;
+  }
+
+  ion-icon{
+      color: white;
+      font-size: 3em;
+      line-height: 2;
+  }
+
+  
+
+}

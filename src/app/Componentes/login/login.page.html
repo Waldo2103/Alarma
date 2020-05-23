@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-toolbar color="danger">
+      <ion-grid>
+          <ion-row>
+            <ion-col>
+              
+                <ion-title>Inicio de Sesión</ion-title>
+            </ion-col>
+            <ion-col>
+                <!--div align="right"><ion-fab-button id="" shape="round" (click)="Salir()" color="danger" fill="outline"> <ion-icon name="exit"></ion-icon></ion-fab-button></div-->
+            </ion-col>
+            
+          </ion-row>
+      </ion-grid>
+    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <img class="icon" src="assets/icon/login.png" alt="" >
+<ion-item class="input-item">
+  <!--ion-label position="floating"> Correo</ion-label-->
+  <ion-input type="text" [(ngModel)]="email" name="email" placeholder="Correo" shape="round"></ion-input>
+</ion-item>
+<ion-item class="input-item">
+  <!--ion-label position="floating">Contraseña</ion-label-->
+  <ion-input type="password" [(ngModel)]="password" name="password" placeholder="Contraseña"></ion-input>
+</ion-item>
+<br>
+<div align="center"><ion-fab-button id="" shape="round" horizontal="center" (click)="OnSubmitLogin()" color="danger" expand="block" fill="outline"> <ion-icon name="key"></ion-icon></ion-fab-button></div> <!---->
+<div padding  align="center">
+  <br *ngIf="!show">
+<ion-spinner color="danger" *ngIf="show" position="floating"></ion-spinner>
+</div>
+<ion-list class="transparent-item">
+    <ion-list-header align="center" class="label"><p>USUARIOS</p></ion-list-header>
+<ion-radio-group>
+<ion-item class="transparent-item">
+  <ion-radio color="danger" (click)="autocomplete('admin')" slot="start"></ion-radio>
+  <ion-label class="label">Admin</ion-label>
+</ion-item>
+<ion-item class="transparent-item">
+  <ion-radio color="danger" (click)="autocomplete('invitado')" slot="start"></ion-radio>
+  <ion-label class="label">Invitado</ion-label>
+</ion-item>
+<ion-item class="transparent-item">
+  <ion-radio color="danger" (click)="autocomplete('cristian')" slot="start"></ion-radio>
+  <ion-label class="label">Cristian</ion-label>
+</ion-item>
+<ion-item class="transparent-item">
+  <ion-radio color="danger" (click)="autocomplete('aitu')" slot="start"></ion-radio>
+  <ion-label class="label">Usuario 2</ion-label>
+</ion-item>
+<ion-item class="transparent-item">
+  <ion-radio color="danger" (click)="autocomplete('tester')" slot="start"></ion-radio>
+  <ion-label class="label">Tester</ion-label>
+</ion-item>
+</ion-radio-group>
+</ion-list>
+</ion-content>
